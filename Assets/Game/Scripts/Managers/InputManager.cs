@@ -8,7 +8,12 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Managers.GameManager.PlayRespect();
+            Managers.GameManager.SetState(typeof(RespectState));
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Managers.GameManager.SetState(typeof(InitialState));
         }
     }
 }
