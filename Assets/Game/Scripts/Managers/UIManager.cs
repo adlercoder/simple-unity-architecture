@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject startPanel;
-    public GameObject respectPanel;
+    [SerializeField] GameObject startPanel;
+    [SerializeField] GameObject respectPanel;
 
     public void ShowRespectPanel()
     {
