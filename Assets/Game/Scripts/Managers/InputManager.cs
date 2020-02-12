@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
@@ -8,12 +6,12 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Managers.GameManager.SetState(typeof(RespectState));
+            Managers.GameManager.SetState(typeof(Respect));
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Managers.GameManager.SetState(typeof(InitialState));
+            Managers.GameManager.SetState(typeof(Initial));
         }
     }
 }

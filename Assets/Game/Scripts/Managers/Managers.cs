@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(ADSManager))]
 [RequireComponent(typeof(AudioManager))]
@@ -15,11 +13,15 @@ public class Managers : MonoBehaviour
     private static InputManager _inputManager;
     private static UIManager _uiManager;
 
-    public static ADSManager AdsManager { get => _adsManager; }
-    public static AudioManager AudioManager { get => _audioManager; }
-    public static GameManager GameManager { get => _gameManager; }
-    public static InputManager InputManager { get => _inputManager; }
-    public static UIManager UIManager { get => _uiManager; }
+    public static ADSManager AdsManager => _adsManager;
+
+    public static AudioManager AudioManager => _audioManager;
+
+    public static GameManager GameManager => _gameManager;
+
+    public static InputManager InputManager => _inputManager;
+
+    public static UIManager UIManager => _uiManager;
 
     private void Awake()
     {

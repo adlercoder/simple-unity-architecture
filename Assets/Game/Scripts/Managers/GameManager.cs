@@ -1,38 +1,34 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private StatesBase _currentState;
-    public StatesBase CurrentState { get => _currentState; }
+    public BaseState Current { get; private set; }
 
     private void Start()
     {
-        SetState(typeof(InitialState));
+        SetState(typeof(Initial));
     }
 
     private void Update()
     {
-        if (_currentState)
+        if (Current)
         {
-            _currentState.OnUpdate();
+            Current.OnUpdate();
         }
     }
 
     public void SetState(System.Type newStateType)
     {
-        if (_currentState != null)
+        if (Current != null)
         {
-            _currentState.OnDeactivate();
+            Current.OnDeactivate();
         }
 
-        _currentState = GetComponentInChildren(newStateType) as StatesBase;
+        Current = GetComponentInChildren(newStateType) as BaseState;
 
-        if (_currentState != null)
+        if (Current != null)
         {
-            _currentState.OnActivate();
+            Current.OnActivate();
         }
     }
 }
