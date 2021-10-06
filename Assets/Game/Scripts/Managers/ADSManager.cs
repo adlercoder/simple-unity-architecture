@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class ADSManager : MonoBehaviour
+public class AdsManager : MonoBehaviour
 {
-    public void ShowAnnoyingInter()
+    public void ShowAnnoyingAd()
     {
-        print("ADS showing...");
+        print("Ads showing...");
     }
 }

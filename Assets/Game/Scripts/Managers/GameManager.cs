@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        SetState(typeof(Initial));
+        SetState(typeof(InitialState));
     }
 
     private void Update()

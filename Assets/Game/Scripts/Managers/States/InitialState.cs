@@ -1,4 +1,4 @@
-﻿public class Initial : BaseState
+﻿public class InitialState : BaseState
 {
     public override void OnActivate()
     {
