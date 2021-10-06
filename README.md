@@ -1,2 +1,2 @@
-# global-manager-unity-architecture
-Simple architecture with global scripts-manager for Unity projects. Nice solution for small projects.
+# Simple Unity architecture
+Simple architecture with global script-manager for Unity projects. Good solution for small projects.
